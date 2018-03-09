@@ -7,6 +7,8 @@
 //
 
 #import "ZYZoomScrollView.h"
+#import <UIImageView+WebCache.h>
+#import <UIView+WebCache.h>
 @interface ZYZoomScrollView()<UIScrollViewDelegate>
 @end
 @implementation ZYZoomScrollView
@@ -55,7 +57,19 @@
     if (_item != item) {
         _item = item;
     }
-    _imageView.image = _item.image;
+    
+    if (_item.image) {
+        _imageView.image = _item.image;
+    }else if (_item.url){
+        [_imageView sd_setShowActivityIndicatorView:true];
+        [_imageView sd_setIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [_imageView sd_setImageWithPreviousCachedImageWithURL:_item.url placeholderImage:_item.image options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            
+        } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            [self resizeImage];
+        }];
+    }
+    
     [self resizeImage];
 }
 
@@ -68,11 +82,11 @@
 }
 -(void)resizeImage {
     if (_imageView.image) {
+        _imageView.contentMode = UIViewContentModeScaleToFill;
+
         CGFloat scrollHeight = self.bounds.size.height;
         CGFloat scrollWidth = self.bounds.size.width;
-        
         CGSize imageSize = _imageView.image.size;
-        
         CGFloat resizedImageWidth = self.bounds.size.width;
         CGFloat resizedImageHeight = imageSize.height * (scrollWidth/imageSize.width);
         CGRect resizedImageFrame = CGRectMake(0, 0, resizedImageWidth, resizedImageHeight);
@@ -85,6 +99,9 @@
         }else{
             _imageView.center = self.center;
         }
+    }else{
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.center = self.center;
     }
 }
 #pragma mark - UIScrollViewDelegate

@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "ZYImageItemManager.h"
 @interface ZYImageItem : NSObject
 @property(nonatomic,strong,readonly)NSURL *url;
 @property(nonatomic,strong,readonly)NSURL *thumbImageURL;
 @property(nonatomic,strong,readonly)UIImage *image;
 @property(nonatomic,strong,readonly)UIImageView *sourceImageView;
+@property(nonatomic,strong,readwrite)ZYImageItemManager *itemManager;
 
 /**
  使用本地图片 初始化item

@@ -12,4 +12,5 @@
 @interface ZYImageCell : UICollectionViewCell
 @property(nonatomic,strong)ZYImageItem *item;
 @property(nonatomic,strong)ZYZoomScrollView *zoomView;
+
 @end

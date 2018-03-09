@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "ZYImageItem.h"
+#import "ZYImageItemManager.h"
 
 @class ZYImageBrowser;
 @protocol ZYImageBrowserDelegate<NSObject>
+
+@optional
 -(void)imageBrowser:(ZYImageBrowser *)imageBrowser responseLongPressGestureRecognizer:(UILongPressGestureRecognizer *)longPressGestureRecognizer;
 @end
 
 
 @interface ZYImageBrowser : UIViewController
 
+@property(nonatomic,strong)ZYImageItemManager * itemManager;
 @property(nonatomic,weak)id<ZYImageBrowserDelegate>delegate;
 
 /**
@@ -29,18 +33,23 @@
 
 /**
  显示
+
+ @param animated 是否显示图片放大的到位置上动画
  */
--(void)show;
+-(void)showAnimated:(BOOL)animated;
 
 /**
  从index位置的图片开始显示
 
  @param index 索引
+ @param animated 是否显示图片放大的到位置上动画
  */
--(void)showAtIndex:(NSInteger)index;
+-(void)showAtIndex:(NSInteger)index animated:(BOOL)animated;
 
 /**
  隐藏
+
+ @param animated 是否显示图片回到位置上的动画
  */
--(void)hide;
+-(void)hideAnimated:(BOOL)animated;
 @end

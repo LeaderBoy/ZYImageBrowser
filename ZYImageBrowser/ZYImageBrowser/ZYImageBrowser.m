@@ -8,7 +8,6 @@
 
 #import "ZYImageBrowser.h"
 #import "ZYImageCell.h"
-
 @interface ZYImageBrowser ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)NSArray * photos;
 @property(nonatomic,strong)UICollectionView *iCollectionView;
@@ -45,27 +44,33 @@
         _photos = imageItems;
         _collectionViewPadding = 15;
         _animationDuration = 0.3;
-
         [self browser_addSubViews];
     }
     return self;
 }
 #pragma mark - Show
 
--(void)show {
-    [self showAtIndex:0];
+-(void)showAnimated:(BOOL)animated {
+    [self showAtIndex:0 animated:animated];
 }
 
--(void)showAtIndex:(NSInteger)index {
+-(void)showAtIndex:(NSInteger)index animated:(BOOL)animated {
     NSAssert(_photos.count > index, @"index 越界");
     self.photoWindow.hidden = NO;
     self.currentItem = _photos[index];
     
     CGFloat x = index * self.iCollectionView.bounds.size.width;
+    
     [self.iCollectionView setContentOffset:CGPointMake(x, 0)];
     
-    [self animatedIn];
-    
+    if (animated) {
+        [self animatedIn];
+    }else{
+        [UIView animateWithDuration:_animationDuration animations:^{
+            self.photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:1];
+            self.iCollectionView.alpha = 1;
+        }];
+    }
 }
 
 -(void)animatedIn {
@@ -94,8 +99,21 @@
 
 #pragma mark - hide
 
+-(void)hideAnimated:(BOOL)animated {
+    if (!_currentBrowserImageView.image || !animated) {
+        [self hide];
+    }else{
+        [self animatedOut];
+    }
+}
 -(void)hide {
-    [self animatedOut];
+    [self showSourceImageView];
+    
+    [UIView animateWithDuration:_animationDuration animations:^{
+        self.photoWindow.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.photoWindow.rootViewController = nil;
+    }];
 }
 
 -(void)animatedOut {
@@ -138,7 +156,9 @@
     CGRect convertRect = [item.sourceImageView.superview convertRect:item.sourceImageView.frame toView:self.view];
     return convertRect;
 }
+
 #pragma mark - UICollectionViewDataSource
+
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ZYImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZYImageCell" forIndexPath:indexPath];
     cell.item = _photos[indexPath.row];
@@ -151,7 +171,6 @@
     return 1;
 }
 
-
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _photos.count;
 }
@@ -159,7 +178,6 @@
 #pragma mark - UICollectionViewDelegate
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(collectionView.bounds.size.width - _collectionViewPadding, ZYScreenHeight);
-    
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -194,7 +212,6 @@
         _photoWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _photoWindow.windowLevel = UIWindowLevelAlert;
         _photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-
         _photoWindow.rootViewController = self;
         [_photoWindow makeKeyAndVisible];
     }
@@ -281,7 +298,7 @@
             double velocityY = fabs(velocity.y);
             
             if ( offsetY > 100 || velocityY > 500) {
-                [self hide];
+                [self hideAnimated:YES];
             }else{
                 [self cancelGestureRecognizerAnimation];
             }
@@ -292,7 +309,16 @@
     }
 }
 
+-(void)showSourceImageView {
+    UIImageView *sourceImageView = [self currentSourceImageView];
+    sourceImageView.alpha = 1;
+}
+
 -(void)translationAndScaleImageWith:(CGPoint)point {
+    
+    if (!_currentBrowserImageView.image) {
+        [self showSourceImageView];
+    }
     
     double translationY = point.y;
     double translationX = point.x;
@@ -333,8 +359,6 @@
 }
 
 
-
-
 -(void)responseLongPressGesture:(UILongPressGestureRecognizer *)gesture {
     
     if ([self.delegate respondsToSelector:@selector(imageBrowser:responseLongPressGestureRecognizer:)]) {
@@ -356,7 +380,7 @@
 
 -(void)responseSingleTapGesture:(UIPanGestureRecognizer *)gesture {
     if (_zoomScrollView.zoomScale == 1.0) {
-        [self hide];
+        [self hideAnimated:YES];
     }else {
         
     }
@@ -375,6 +399,12 @@
 
         [_zoomScrollView zoomToRect:CGRectMake(location.x - width/2, location.y - height/2, width, height) animated:YES];
     }
+}
+
+
+-(void)dealloc {
+    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
+    [[[SDWebImageManager sharedManager] imageCache] clearDiskOnCompletion:nil];
 }
 
 
