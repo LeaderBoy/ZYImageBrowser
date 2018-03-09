@@ -72,8 +72,9 @@
         CGFloat scrollWidth = self.bounds.size.width;
         
         CGSize imageSize = _imageView.image.size;
+        
         CGFloat resizedImageWidth = self.bounds.size.width;
-        CGFloat resizedImageHeight = resizedImageWidth * (imageSize.height/imageSize.width);
+        CGFloat resizedImageHeight = imageSize.height * (scrollWidth/imageSize.width);
         CGRect resizedImageFrame = CGRectMake(0, 0, resizedImageWidth, resizedImageHeight);
         _imageView.frame = resizedImageFrame;
         

@@ -60,13 +60,17 @@
     NSAssert(_photos.count > index, @"index 越界");
     self.photoWindow.hidden = NO;
     self.currentItem = _photos[index];
+    
+    CGFloat x = index * self.iCollectionView.bounds.size.width;
+    [self.iCollectionView setContentOffset:CGPointMake(x, 0)];
+    
     [self animatedIn];
+    
 }
 
 -(void)animatedIn {
     UIImageView *imageView = [self currentTempImageView];
     CGRect animatedInFrame = [self animatedInFrameForImageView:imageView];
-
     [self.view addSubview:imageView];
     
     [UIView animateWithDuration:_animationDuration animations:^{
@@ -104,6 +108,7 @@
     } completion:^(BOOL finished) {
         self.photoWindow.hidden = YES;
         sourceImageView.alpha = 1;
+        self.photoWindow.rootViewController = nil;
     }];
 }
 
@@ -331,17 +336,22 @@
 
 
 -(void)responseLongPressGesture:(UILongPressGestureRecognizer *)gesture {
-    if (gesture.state != UIGestureRecognizerStateBegan) {
-        return;
+    
+    if ([self.delegate respondsToSelector:@selector(imageBrowser:responseLongPressGestureRecognizer:)]) {
+        [self.delegate imageBrowser:self responseLongPressGestureRecognizer:gesture];
+    }else{
+        if (gesture.state != UIGestureRecognizerStateBegan) {
+            return;
+        }else{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否保存当前图片" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancle" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否保存图片" message:@"不存吗" preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"cancle" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)responseSingleTapGesture:(UIPanGestureRecognizer *)gesture {

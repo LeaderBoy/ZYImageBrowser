@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ZYImageItem.h"
+
+@class ZYImageBrowser;
+@protocol ZYImageBrowserDelegate<NSObject>
+-(void)imageBrowser:(ZYImageBrowser *)imageBrowser responseLongPressGestureRecognizer:(UILongPressGestureRecognizer *)longPressGestureRecognizer;
+@end
+
+
 @interface ZYImageBrowser : UIViewController
+
+@property(nonatomic,weak)id<ZYImageBrowserDelegate>delegate;
 
 /**
  使用 item 初始化 ZYImageBrowser

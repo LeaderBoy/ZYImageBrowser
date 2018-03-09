@@ -19,48 +19,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *imageName = [NSString stringWithFormat:@"photo%d.jpg",1];
-    
-    UIImage *image = [UIImage imageNamed:imageName];
-
-    _imageView = [[UIImageView alloc]initWithImage:image];
-    _imageView.frame = CGRectMake(0, 110, 100, 100);
-    _imageView.userInteractionEnabled = YES;
-    [self.view addSubview:_imageView];
     [self loadData];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taped:)];
-    [_imageView addGestureRecognizer:tap];
 }
 
--(void)taped:(UITapGestureRecognizer *)tap {
-    ZYImageBrowser *browser = [[ZYImageBrowser alloc] initWithImageItems:_photos];
-    [browser showAtIndex:0];
-}
+
 -(void)loadData {
     NSMutableArray * photos = [[NSMutableArray alloc]init];
-    for (int i = 0; i < 8; i ++) {
-        NSString *imageName = [NSString stringWithFormat:@"photo%d.jpg",i+1];
+    for (int i = 0; i < 3; i ++) {
+        NSString *imageName = [NSString stringWithFormat:@"火影%02d",i+1];
         UIImage *image = [UIImage imageNamed:imageName];
-        //        [photos addObject:image];
         
-        ZYImageItem *item = [[ZYImageItem alloc] initWithImage:image sourceImageView:_imageView];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10 + i * (100 + 10), 100, 100, 100)];
+        imageView.image = image;
+        imageView.userInteractionEnabled = YES;
+        imageView.tag = 100 + i;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taped:)];
+        [imageView addGestureRecognizer:tap];
+        [self.view addSubview:imageView];
+        
+        ZYImageItem *item = [[ZYImageItem alloc] initWithImage:image sourceImageView:imageView];
         [photos addObject:item];
     }
     _photos = photos;
 }
 
-
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-//    [self presentViewController:browser animated:YES completion:nil];
+-(void)taped:(UITapGestureRecognizer *)tap {
+    UIImageView *imageView = (UIImageView *)tap.view;
+    ZYImageBrowser *browser = [[ZYImageBrowser alloc] initWithImageItems:_photos];
+    [browser showAtIndex:imageView.tag - 100];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 
 @end
