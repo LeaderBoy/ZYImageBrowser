@@ -7,6 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520228F120457BFC009081C2 /* ZYImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 520228F020457BFC009081C2 /* ZYImageBrowser.m */; };
+		5202292A20463F6A009081C2 /* image_火影忍者.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520228F320463F6A009081C2 /* image_火影忍者.plist */; };
+		5202292B20463F6A009081C2 /* 火影01.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F420463F6A009081C2 /* 火影01.png */; };
+		5202292C20463F6A009081C2 /* 火影02.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F520463F6A009081C2 /* 火影02.png */; };
+		5202292D20463F6A009081C2 /* 火影03.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F620463F6A009081C2 /* 火影03.png */; };
+		5202292E20463F6A009081C2 /* 火影04.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F720463F6A009081C2 /* 火影04.png */; };
+		5202292F20463F6A009081C2 /* 火影05.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F820463F6A009081C2 /* 火影05.png */; };
+		5202293020463F6A009081C2 /* 火影06.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228F920463F6A009081C2 /* 火影06.png */; };
+		5202293120463F6A009081C2 /* 火影07.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FA20463F6A009081C2 /* 火影07.png */; };
+		5202293220463F6A009081C2 /* 火影08.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FB20463F6A009081C2 /* 火影08.png */; };
+		5202293320463F6A009081C2 /* 火影09.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FC20463F6A009081C2 /* 火影09.png */; };
+		5202293420463F6A009081C2 /* 火影10.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FD20463F6A009081C2 /* 火影10.png */; };
+		5202293520463F6A009081C2 /* 火影11.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FE20463F6A009081C2 /* 火影11.png */; };
+		5202293620463F6A009081C2 /* 火影12.png in Resources */ = {isa = PBXBuildFile; fileRef = 520228FF20463F6A009081C2 /* 火影12.png */; };
+		5202293720463F6A009081C2 /* 火影13.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290020463F6A009081C2 /* 火影13.png */; };
+		5202293820463F6A009081C2 /* 火影14.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290120463F6A009081C2 /* 火影14.png */; };
+		5202293920463F6A009081C2 /* 火影15.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290220463F6A009081C2 /* 火影15.png */; };
+		5202293A20463F6A009081C2 /* 火影16.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290320463F6A009081C2 /* 火影16.png */; };
+		5202293B20463F6A009081C2 /* 火影17.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290420463F6A009081C2 /* 火影17.png */; };
+		5202293C20463F6A009081C2 /* 火影18.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290520463F6A009081C2 /* 火影18.png */; };
+		5202293D20463F6A009081C2 /* 火影19.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290620463F6A009081C2 /* 火影19.png */; };
+		5202293E20463F6A009081C2 /* 火影20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290720463F6A009081C2 /* 火影20.png */; };
+		5202293F20463F6A009081C2 /* 火影21.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290820463F6A009081C2 /* 火影21.png */; };
+		5202294020463F6A009081C2 /* 火影22.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290920463F6A009081C2 /* 火影22.png */; };
+		5202294120463F6A009081C2 /* 火影23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290A20463F6A009081C2 /* 火影23.png */; };
+		5202294220463F6A009081C2 /* 火影24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290B20463F6A009081C2 /* 火影24.png */; };
+		5202294320463F6A009081C2 /* 火影25.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290C20463F6A009081C2 /* 火影25.png */; };
+		5202294420463F6A009081C2 /* 火影26.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290D20463F6A009081C2 /* 火影26.png */; };
+		5202294520463F6A009081C2 /* 火影27.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290E20463F6A009081C2 /* 火影27.png */; };
+		5202294620463F6A009081C2 /* 火影28.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202290F20463F6A009081C2 /* 火影28.png */; };
+		5202294720463F6A009081C2 /* 火影29.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291020463F6A009081C2 /* 火影29.png */; };
+		5202294820463F6A009081C2 /* 火影30.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291120463F6A009081C2 /* 火影30.png */; };
+		5202294920463F6A009081C2 /* 火影31.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291220463F6A009081C2 /* 火影31.png */; };
+		5202294A20463F6A009081C2 /* 火影32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291320463F6A009081C2 /* 火影32.png */; };
+		5202294B20463F6A009081C2 /* 火影33.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291420463F6A009081C2 /* 火影33.png */; };
+		5202294C20463F6A009081C2 /* 火影34.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291520463F6A009081C2 /* 火影34.png */; };
+		5202294D20463F6A009081C2 /* 火影35.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291620463F6A009081C2 /* 火影35.png */; };
+		5202294E20463F6A009081C2 /* 火影36.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291720463F6A009081C2 /* 火影36.png */; };
+		5202294F20463F6A009081C2 /* 火影37.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291820463F6A009081C2 /* 火影37.png */; };
+		5202295020463F6A009081C2 /* 火影38.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291920463F6A009081C2 /* 火影38.png */; };
+		5202295120463F6A009081C2 /* 火影39.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291A20463F6A009081C2 /* 火影39.png */; };
+		5202295220463F6A009081C2 /* 火影40.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291B20463F6A009081C2 /* 火影40.png */; };
+		5202295320463F6A009081C2 /* 火影41.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291C20463F6A009081C2 /* 火影41.png */; };
+		5202295420463F6A009081C2 /* 火影42.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291D20463F6A009081C2 /* 火影42.png */; };
+		5202295520463F6A009081C2 /* 火影43.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291E20463F6A009081C2 /* 火影43.png */; };
+		5202295620463F6A009081C2 /* 火影44.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202291F20463F6A009081C2 /* 火影44.png */; };
+		5202295720463F6A009081C2 /* 火影45.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292020463F6A009081C2 /* 火影45.png */; };
+		5202295820463F6A009081C2 /* 火影46.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292120463F6A009081C2 /* 火影46.png */; };
+		5202295920463F6A009081C2 /* 火影47.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292220463F6A009081C2 /* 火影47.png */; };
+		5202295A20463F6A009081C2 /* 火影48.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292320463F6A009081C2 /* 火影48.png */; };
+		5202295B20463F6A009081C2 /* 火影49.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292420463F6A009081C2 /* 火影49.png */; };
+		5202295C20463F6A009081C2 /* 火影50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292520463F6A009081C2 /* 火影50.png */; };
+		5202295D20463F6A009081C2 /* 火影51.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292620463F6A009081C2 /* 火影51.png */; };
+		5202295E20463F6A009081C2 /* 火影52.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292720463F6A009081C2 /* 火影52.png */; };
+		5202295F20463F6A009081C2 /* 火影53.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292820463F6A009081C2 /* 火影53.png */; };
+		5202296020463F6A009081C2 /* 火影54.png in Resources */ = {isa = PBXBuildFile; fileRef = 5202292920463F6A009081C2 /* 火影54.png */; };
+		524B971A204957F300D2AF00 /* ZYZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B9719204957F300D2AF00 /* ZYZoomScrollView.m */; };
+		524B9720204CDC3C00D2AF00 /* ZYImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B971F204CDC3C00D2AF00 /* ZYImageCell.m */; };
+		524B9723204CDC6500D2AF00 /* ZYImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B9722204CDC6500D2AF00 /* ZYImageItem.m */; };
 		52AA85C8204554B7008F4789 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA85C7204554B7008F4789 /* AppDelegate.m */; };
 		52AA85CB204554B7008F4789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA85CA204554B7008F4789 /* ViewController.m */; };
 		52AA85CE204554B7008F4789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA85CC204554B7008F4789 /* Main.storyboard */; };
@@ -35,6 +94,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520228EF20457BFC009081C2 /* ZYImageBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageBrowser.h; sourceTree = "<group>"; };
+		520228F020457BFC009081C2 /* ZYImageBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageBrowser.m; sourceTree = "<group>"; };
+		520228F320463F6A009081C2 /* image_火影忍者.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "image_火影忍者.plist"; sourceTree = "<group>"; };
+		520228F420463F6A009081C2 /* 火影01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影01.png"; sourceTree = "<group>"; };
+		520228F520463F6A009081C2 /* 火影02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影02.png"; sourceTree = "<group>"; };
+		520228F620463F6A009081C2 /* 火影03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影03.png"; sourceTree = "<group>"; };
+		520228F720463F6A009081C2 /* 火影04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影04.png"; sourceTree = "<group>"; };
+		520228F820463F6A009081C2 /* 火影05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影05.png"; sourceTree = "<group>"; };
+		520228F920463F6A009081C2 /* 火影06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影06.png"; sourceTree = "<group>"; };
+		520228FA20463F6A009081C2 /* 火影07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影07.png"; sourceTree = "<group>"; };
+		520228FB20463F6A009081C2 /* 火影08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影08.png"; sourceTree = "<group>"; };
+		520228FC20463F6A009081C2 /* 火影09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影09.png"; sourceTree = "<group>"; };
+		520228FD20463F6A009081C2 /* 火影10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影10.png"; sourceTree = "<group>"; };
+		520228FE20463F6A009081C2 /* 火影11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影11.png"; sourceTree = "<group>"; };
+		520228FF20463F6A009081C2 /* 火影12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影12.png"; sourceTree = "<group>"; };
+		5202290020463F6A009081C2 /* 火影13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影13.png"; sourceTree = "<group>"; };
+		5202290120463F6A009081C2 /* 火影14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影14.png"; sourceTree = "<group>"; };
+		5202290220463F6A009081C2 /* 火影15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影15.png"; sourceTree = "<group>"; };
+		5202290320463F6A009081C2 /* 火影16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影16.png"; sourceTree = "<group>"; };
+		5202290420463F6A009081C2 /* 火影17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影17.png"; sourceTree = "<group>"; };
+		5202290520463F6A009081C2 /* 火影18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影18.png"; sourceTree = "<group>"; };
+		5202290620463F6A009081C2 /* 火影19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影19.png"; sourceTree = "<group>"; };
+		5202290720463F6A009081C2 /* 火影20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影20.png"; sourceTree = "<group>"; };
+		5202290820463F6A009081C2 /* 火影21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影21.png"; sourceTree = "<group>"; };
+		5202290920463F6A009081C2 /* 火影22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影22.png"; sourceTree = "<group>"; };
+		5202290A20463F6A009081C2 /* 火影23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影23.png"; sourceTree = "<group>"; };
+		5202290B20463F6A009081C2 /* 火影24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影24.png"; sourceTree = "<group>"; };
+		5202290C20463F6A009081C2 /* 火影25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影25.png"; sourceTree = "<group>"; };
+		5202290D20463F6A009081C2 /* 火影26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影26.png"; sourceTree = "<group>"; };
+		5202290E20463F6A009081C2 /* 火影27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影27.png"; sourceTree = "<group>"; };
+		5202290F20463F6A009081C2 /* 火影28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影28.png"; sourceTree = "<group>"; };
+		5202291020463F6A009081C2 /* 火影29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影29.png"; sourceTree = "<group>"; };
+		5202291120463F6A009081C2 /* 火影30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影30.png"; sourceTree = "<group>"; };
+		5202291220463F6A009081C2 /* 火影31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影31.png"; sourceTree = "<group>"; };
+		5202291320463F6A009081C2 /* 火影32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影32.png"; sourceTree = "<group>"; };
+		5202291420463F6A009081C2 /* 火影33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影33.png"; sourceTree = "<group>"; };
+		5202291520463F6A009081C2 /* 火影34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影34.png"; sourceTree = "<group>"; };
+		5202291620463F6A009081C2 /* 火影35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影35.png"; sourceTree = "<group>"; };
+		5202291720463F6A009081C2 /* 火影36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影36.png"; sourceTree = "<group>"; };
+		5202291820463F6A009081C2 /* 火影37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影37.png"; sourceTree = "<group>"; };
+		5202291920463F6A009081C2 /* 火影38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影38.png"; sourceTree = "<group>"; };
+		5202291A20463F6A009081C2 /* 火影39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影39.png"; sourceTree = "<group>"; };
+		5202291B20463F6A009081C2 /* 火影40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影40.png"; sourceTree = "<group>"; };
+		5202291C20463F6A009081C2 /* 火影41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影41.png"; sourceTree = "<group>"; };
+		5202291D20463F6A009081C2 /* 火影42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影42.png"; sourceTree = "<group>"; };
+		5202291E20463F6A009081C2 /* 火影43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影43.png"; sourceTree = "<group>"; };
+		5202291F20463F6A009081C2 /* 火影44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影44.png"; sourceTree = "<group>"; };
+		5202292020463F6A009081C2 /* 火影45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影45.png"; sourceTree = "<group>"; };
+		5202292120463F6A009081C2 /* 火影46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影46.png"; sourceTree = "<group>"; };
+		5202292220463F6A009081C2 /* 火影47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影47.png"; sourceTree = "<group>"; };
+		5202292320463F6A009081C2 /* 火影48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影48.png"; sourceTree = "<group>"; };
+		5202292420463F6A009081C2 /* 火影49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影49.png"; sourceTree = "<group>"; };
+		5202292520463F6A009081C2 /* 火影50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影50.png"; sourceTree = "<group>"; };
+		5202292620463F6A009081C2 /* 火影51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影51.png"; sourceTree = "<group>"; };
+		5202292720463F6A009081C2 /* 火影52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影52.png"; sourceTree = "<group>"; };
+		5202292820463F6A009081C2 /* 火影53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影53.png"; sourceTree = "<group>"; };
+		5202292920463F6A009081C2 /* 火影54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火影54.png"; sourceTree = "<group>"; };
+		524B9718204957F300D2AF00 /* ZYZoomScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYZoomScrollView.h; sourceTree = "<group>"; };
+		524B9719204957F300D2AF00 /* ZYZoomScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYZoomScrollView.m; sourceTree = "<group>"; };
+		524B971E204CDC3C00D2AF00 /* ZYImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageCell.h; sourceTree = "<group>"; };
+		524B971F204CDC3C00D2AF00 /* ZYImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageCell.m; sourceTree = "<group>"; };
+		524B9721204CDC6500D2AF00 /* ZYImageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageItem.h; sourceTree = "<group>"; };
+		524B9722204CDC6500D2AF00 /* ZYImageItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageItem.m; sourceTree = "<group>"; };
 		52AA85C3204554B7008F4789 /* ZYImageBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYImageBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA85C6204554B7008F4789 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AA85C7204554B7008F4789 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +200,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520228F220463F6A009081C2 /* 火影忍者 */ = {
+			isa = PBXGroup;
+			children = (
+				520228F320463F6A009081C2 /* image_火影忍者.plist */,
+				520228F420463F6A009081C2 /* 火影01.png */,
+				520228F520463F6A009081C2 /* 火影02.png */,
+				520228F620463F6A009081C2 /* 火影03.png */,
+				520228F720463F6A009081C2 /* 火影04.png */,
+				520228F820463F6A009081C2 /* 火影05.png */,
+				520228F920463F6A009081C2 /* 火影06.png */,
+				520228FA20463F6A009081C2 /* 火影07.png */,
+				520228FB20463F6A009081C2 /* 火影08.png */,
+				520228FC20463F6A009081C2 /* 火影09.png */,
+				520228FD20463F6A009081C2 /* 火影10.png */,
+				520228FE20463F6A009081C2 /* 火影11.png */,
+				520228FF20463F6A009081C2 /* 火影12.png */,
+				5202290020463F6A009081C2 /* 火影13.png */,
+				5202290120463F6A009081C2 /* 火影14.png */,
+				5202290220463F6A009081C2 /* 火影15.png */,
+				5202290320463F6A009081C2 /* 火影16.png */,
+				5202290420463F6A009081C2 /* 火影17.png */,
+				5202290520463F6A009081C2 /* 火影18.png */,
+				5202290620463F6A009081C2 /* 火影19.png */,
+				5202290720463F6A009081C2 /* 火影20.png */,
+				5202290820463F6A009081C2 /* 火影21.png */,
+				5202290920463F6A009081C2 /* 火影22.png */,
+				5202290A20463F6A009081C2 /* 火影23.png */,
+				5202290B20463F6A009081C2 /* 火影24.png */,
+				5202290C20463F6A009081C2 /* 火影25.png */,
+				5202290D20463F6A009081C2 /* 火影26.png */,
+				5202290E20463F6A009081C2 /* 火影27.png */,
+				5202290F20463F6A009081C2 /* 火影28.png */,
+				5202291020463F6A009081C2 /* 火影29.png */,
+				5202291120463F6A009081C2 /* 火影30.png */,
+				5202291220463F6A009081C2 /* 火影31.png */,
+				5202291320463F6A009081C2 /* 火影32.png */,
+				5202291420463F6A009081C2 /* 火影33.png */,
+				5202291520463F6A009081C2 /* 火影34.png */,
+				5202291620463F6A009081C2 /* 火影35.png */,
+				5202291720463F6A009081C2 /* 火影36.png */,
+				5202291820463F6A009081C2 /* 火影37.png */,
+				5202291920463F6A009081C2 /* 火影38.png */,
+				5202291A20463F6A009081C2 /* 火影39.png */,
+				5202291B20463F6A009081C2 /* 火影40.png */,
+				5202291C20463F6A009081C2 /* 火影41.png */,
+				5202291D20463F6A009081C2 /* 火影42.png */,
+				5202291E20463F6A009081C2 /* 火影43.png */,
+				5202291F20463F6A009081C2 /* 火影44.png */,
+				5202292020463F6A009081C2 /* 火影45.png */,
+				5202292120463F6A009081C2 /* 火影46.png */,
+				5202292220463F6A009081C2 /* 火影47.png */,
+				5202292320463F6A009081C2 /* 火影48.png */,
+				5202292420463F6A009081C2 /* 火影49.png */,
+				5202292520463F6A009081C2 /* 火影50.png */,
+				5202292620463F6A009081C2 /* 火影51.png */,
+				5202292720463F6A009081C2 /* 火影52.png */,
+				5202292820463F6A009081C2 /* 火影53.png */,
+				5202292920463F6A009081C2 /* 火影54.png */,
+			);
+			path = "火影忍者";
+			sourceTree = "<group>";
+		};
 		52AA85BA204554B7008F4789 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +289,8 @@
 				52AA85C7204554B7008F4789 /* AppDelegate.m */,
 				52AA85C9204554B7008F4789 /* ViewController.h */,
 				52AA85CA204554B7008F4789 /* ViewController.m */,
+				520228F220463F6A009081C2 /* 火影忍者 */,
+				52AA85F8204554C2008F4789 /* ZYImageBrowser */,
 				52AA85CC204554B7008F4789 /* Main.storyboard */,
 				52AA85CF204554B7008F4789 /* Assets.xcassets */,
 				52AA85D1204554B7008F4789 /* LaunchScreen.storyboard */,
@@ -130,6 +316,21 @@
 				52AA85EC204554B7008F4789 /* Info.plist */,
 			);
 			path = ZYImageBrowserUITests;
+			sourceTree = "<group>";
+		};
+		52AA85F8204554C2008F4789 /* ZYImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				520228EF20457BFC009081C2 /* ZYImageBrowser.h */,
+				520228F020457BFC009081C2 /* ZYImageBrowser.m */,
+				524B9721204CDC6500D2AF00 /* ZYImageItem.h */,
+				524B9722204CDC6500D2AF00 /* ZYImageItem.m */,
+				524B971E204CDC3C00D2AF00 /* ZYImageCell.h */,
+				524B971F204CDC3C00D2AF00 /* ZYImageCell.m */,
+				524B9718204957F300D2AF00 /* ZYZoomScrollView.h */,
+				524B9719204957F300D2AF00 /* ZYZoomScrollView.m */,
+			);
+			path = ZYImageBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +439,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5202293720463F6A009081C2 /* 火影13.png in Resources */,
+				5202294620463F6A009081C2 /* 火影28.png in Resources */,
+				5202294020463F6A009081C2 /* 火影22.png in Resources */,
+				5202295D20463F6A009081C2 /* 火影51.png in Resources */,
 				52AA85D3204554B7008F4789 /* LaunchScreen.storyboard in Resources */,
+				5202293320463F6A009081C2 /* 火影09.png in Resources */,
+				5202296020463F6A009081C2 /* 火影54.png in Resources */,
 				52AA85D0204554B7008F4789 /* Assets.xcassets in Resources */,
+				5202292A20463F6A009081C2 /* image_火影忍者.plist in Resources */,
+				5202293020463F6A009081C2 /* 火影06.png in Resources */,
+				5202295C20463F6A009081C2 /* 火影50.png in Resources */,
+				5202295320463F6A009081C2 /* 火影41.png in Resources */,
+				5202295020463F6A009081C2 /* 火影38.png in Resources */,
+				5202294E20463F6A009081C2 /* 火影36.png in Resources */,
+				5202295920463F6A009081C2 /* 火影47.png in Resources */,
+				5202294A20463F6A009081C2 /* 火影32.png in Resources */,
+				5202294920463F6A009081C2 /* 火影31.png in Resources */,
+				5202294720463F6A009081C2 /* 火影29.png in Resources */,
+				5202293C20463F6A009081C2 /* 火影18.png in Resources */,
+				5202294120463F6A009081C2 /* 火影23.png in Resources */,
+				5202295120463F6A009081C2 /* 火影39.png in Resources */,
+				5202295B20463F6A009081C2 /* 火影49.png in Resources */,
+				5202295420463F6A009081C2 /* 火影42.png in Resources */,
+				5202293120463F6A009081C2 /* 火影07.png in Resources */,
+				5202294D20463F6A009081C2 /* 火影35.png in Resources */,
+				5202293420463F6A009081C2 /* 火影10.png in Resources */,
+				5202293820463F6A009081C2 /* 火影14.png in Resources */,
+				5202294B20463F6A009081C2 /* 火影33.png in Resources */,
+				5202292E20463F6A009081C2 /* 火影04.png in Resources */,
+				5202294C20463F6A009081C2 /* 火影34.png in Resources */,
+				5202295220463F6A009081C2 /* 火影40.png in Resources */,
+				5202295A20463F6A009081C2 /* 火影48.png in Resources */,
+				5202293520463F6A009081C2 /* 火影11.png in Resources */,
+				5202292B20463F6A009081C2 /* 火影01.png in Resources */,
+				5202295520463F6A009081C2 /* 火影43.png in Resources */,
+				5202293D20463F6A009081C2 /* 火影19.png in Resources */,
+				5202293620463F6A009081C2 /* 火影12.png in Resources */,
 				52AA85CE204554B7008F4789 /* Main.storyboard in Resources */,
+				5202292D20463F6A009081C2 /* 火影03.png in Resources */,
+				5202295E20463F6A009081C2 /* 火影52.png in Resources */,
+				5202295820463F6A009081C2 /* 火影46.png in Resources */,
+				5202293E20463F6A009081C2 /* 火影20.png in Resources */,
+				5202293F20463F6A009081C2 /* 火影21.png in Resources */,
+				5202294220463F6A009081C2 /* 火影24.png in Resources */,
+				5202292C20463F6A009081C2 /* 火影02.png in Resources */,
+				5202294420463F6A009081C2 /* 火影26.png in Resources */,
+				5202292F20463F6A009081C2 /* 火影05.png in Resources */,
+				5202293220463F6A009081C2 /* 火影08.png in Resources */,
+				5202294520463F6A009081C2 /* 火影27.png in Resources */,
+				5202294320463F6A009081C2 /* 火影25.png in Resources */,
+				5202294820463F6A009081C2 /* 火影30.png in Resources */,
+				5202294F20463F6A009081C2 /* 火影37.png in Resources */,
+				5202295720463F6A009081C2 /* 火影45.png in Resources */,
+				5202293A20463F6A009081C2 /* 火影16.png in Resources */,
+				5202293920463F6A009081C2 /* 火影15.png in Resources */,
+				5202293B20463F6A009081C2 /* 火影17.png in Resources */,
+				5202295620463F6A009081C2 /* 火影44.png in Resources */,
+				5202295F20463F6A009081C2 /* 火影53.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +521,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524B971A204957F300D2AF00 /* ZYZoomScrollView.m in Sources */,
 				52AA85CB204554B7008F4789 /* ViewController.m in Sources */,
+				524B9720204CDC3C00D2AF00 /* ZYImageCell.m in Sources */,
+				520228F120457BFC009081C2 /* ZYImageBrowser.m in Sources */,
+				524B9723204CDC6500D2AF00 /* ZYImageItem.m in Sources */,
 				52AA85D6204554B7008F4789 /* main.m in Sources */,
 				52AA85C8204554B7008F4789 /* AppDelegate.m in Sources */,
 			);
