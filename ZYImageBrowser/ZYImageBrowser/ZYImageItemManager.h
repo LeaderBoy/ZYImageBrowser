@@ -11,12 +11,12 @@
 
 typedef NS_ENUM(NSUInteger, ZYImageBrowserLoadingStyle) {
     ZYImageBrowserLoadingStyleIndicatorWhite,
-    ZYImageBrowserLoadingStyleIndicatorGray,
     ZYImageBrowserLoadingStyleProgressive,
 };
 @interface ZYImageItemManager : NSObject
 
 @property(nonatomic,assign)SDWebImageOptions webImageOptions;
-@property(nonatomic,assign)ZYImageBrowserLoadingStyle *loadingStyle;
+@property(nonatomic,assign)ZYImageBrowserLoadingStyle loadingStyle;
 
++(instancetype)sharedItemManager;
 @end

@@ -67,6 +67,7 @@
 		524B9720204CDC3C00D2AF00 /* ZYImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B971F204CDC3C00D2AF00 /* ZYImageCell.m */; };
 		524B9723204CDC6500D2AF00 /* ZYImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B9722204CDC6500D2AF00 /* ZYImageItem.m */; };
 		529A543820528261009D4374 /* ZYImageItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 529A543720528261009D4374 /* ZYImageItemManager.m */; };
+		529A543B20561857009D4374 /* UIView+RoundProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 529A543A20561857009D4374 /* UIView+RoundProgressBar.m */; };
 		52AA85C8204554B7008F4789 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA85C7204554B7008F4789 /* AppDelegate.m */; };
 		52AA85CB204554B7008F4789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA85CA204554B7008F4789 /* ViewController.m */; };
 		52AA85CE204554B7008F4789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA85CC204554B7008F4789 /* Main.storyboard */; };
@@ -162,6 +163,8 @@
 		524B9722204CDC6500D2AF00 /* ZYImageItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageItem.m; sourceTree = "<group>"; };
 		529A543620528261009D4374 /* ZYImageItemManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageItemManager.h; sourceTree = "<group>"; };
 		529A543720528261009D4374 /* ZYImageItemManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageItemManager.m; sourceTree = "<group>"; };
+		529A543920561857009D4374 /* UIView+RoundProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundProgressBar.h"; sourceTree = "<group>"; };
+		529A543A20561857009D4374 /* UIView+RoundProgressBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundProgressBar.m"; sourceTree = "<group>"; };
 		52AA85C3204554B7008F4789 /* ZYImageBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYImageBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA85C6204554B7008F4789 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52AA85C7204554B7008F4789 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -358,6 +361,8 @@
 				524B971F204CDC3C00D2AF00 /* ZYImageCell.m */,
 				524B9718204957F300D2AF00 /* ZYZoomScrollView.h */,
 				524B9719204957F300D2AF00 /* ZYZoomScrollView.m */,
+				529A543920561857009D4374 /* UIView+RoundProgressBar.h */,
+				529A543A20561857009D4374 /* UIView+RoundProgressBar.m */,
 			);
 			path = ZYImageBrowser;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 				524B9720204CDC3C00D2AF00 /* ZYImageCell.m in Sources */,
 				520228F120457BFC009081C2 /* ZYImageBrowser.m in Sources */,
 				524B9723204CDC6500D2AF00 /* ZYImageItem.m in Sources */,
+				529A543B20561857009D4374 /* UIView+RoundProgressBar.m in Sources */,
 				52AA85D6204554B7008F4789 /* main.m in Sources */,
 				52AA85C8204554B7008F4789 /* AppDelegate.m in Sources */,
 				529A543820528261009D4374 /* ZYImageItemManager.m in Sources */,

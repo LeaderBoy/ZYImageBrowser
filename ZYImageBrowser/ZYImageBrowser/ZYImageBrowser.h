@@ -15,13 +15,18 @@
 
 @optional
 -(void)imageBrowser:(ZYImageBrowser *)imageBrowser responseLongPressGestureRecognizer:(UILongPressGestureRecognizer *)longPressGestureRecognizer;
+
 @end
 
 
 @interface ZYImageBrowser : UIViewController
 
-@property(nonatomic,strong)ZYImageItemManager * itemManager;
+@property(nonatomic,strong,readonly)ZYImageItemManager * itemManager;
 @property(nonatomic,weak)id<ZYImageBrowserDelegate>delegate;
+/**
+ 是否允许手势单击退出 图片浏览 Default is YES
+ */
+@property(nonatomic,assign)BOOL enableSingleTapDismiss;
 
 /**
  使用 item 初始化 ZYImageBrowser
@@ -34,7 +39,7 @@
 /**
  显示
 
- @param animated 是否显示图片放大的到位置上动画
+ @param animated 是否显示图片放大到位置上的动画
  */
 -(void)showAnimated:(BOOL)animated;
 
@@ -42,7 +47,7 @@
  从index位置的图片开始显示
 
  @param index 索引
- @param animated 是否显示图片放大的到位置上动画
+ @param animated 是否显示图片放大到位置上的动画
  */
 -(void)showAtIndex:(NSInteger)index animated:(BOOL)animated;
 

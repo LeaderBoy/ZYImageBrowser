@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZYImageItem.h"
+#import <FLAnimatedImageView+WebCache.h>
 @interface ZYZoomScrollView : UIScrollView
 @property(nonatomic,strong)ZYImageItem *item;
 @property(nonatomic,strong)UIImageView *imageView;

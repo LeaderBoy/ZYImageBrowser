@@ -44,6 +44,8 @@
         _photos = imageItems;
         _collectionViewPadding = 15;
         _animationDuration = 0.3;
+        _enableSingleTapDismiss = YES;
+        _itemManager = [ZYImageItemManager sharedItemManager];
         [self browser_addSubViews];
     }
     return self;
@@ -120,6 +122,11 @@
     UIImageView *browserImageView = _currentBrowserImageView;
     CGRect sourceFrame = [self currentSourceImageViewFrame];
     UIImageView *sourceImageView = [self currentSourceImageView];
+    
+    if (!sourceImageView.image) {
+        sourceImageView.image = browserImageView.image;
+    }
+    
     [UIView animateWithDuration:_animationDuration animations:^{
         browserImageView.frame = sourceFrame;
         self.photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
@@ -379,10 +386,10 @@
 }
 
 -(void)responseSingleTapGesture:(UIPanGestureRecognizer *)gesture {
+    if (!_enableSingleTapDismiss) return;
+    
     if (_zoomScrollView.zoomScale == 1.0) {
         [self hideAnimated:YES];
-    }else {
-        
     }
 }
 

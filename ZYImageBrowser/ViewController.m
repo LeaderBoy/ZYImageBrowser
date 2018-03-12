@@ -30,7 +30,7 @@
     
     [originalURLs addObject:@"https://wx3.sinaimg.cn/large/684e8299gy1fm2owjch9vj20j60kdags.jpg"];
     [originalURLs addObject:@"https://wx3.sinaimg.cn/large/684e8299gy1fm2owjjexyj20j60nsguu.jpg"];
-    [originalURLs addObject:@"https://wx3.sinaimg.cn/large/684e8299gy1fm2owjfk07j20j60n0wkc.jpg"];
+    [originalURLs addObject:@"https://wx3.sinaimg.cn/large/684e8299gy1fm2owlotmqg209w05kaug.jpg"];
     
     for (int i = 0; i < 3; i ++) {
         NSString *imageName = [NSString stringWithFormat:@"火影%02d",i+1];
@@ -78,6 +78,10 @@
     UIImageView *imageView = (UIImageView *)tap.view;
     ZYImageBrowser *browser = [[ZYImageBrowser alloc] initWithImageItems:_photos];
     [browser showAtIndex:imageView.tag - 100 animated:NO];
+    
+    browser.itemManager.loadingStyle = ZYImageBrowserLoadingStyleIndicatorWhite;
+    browser.itemManager.webImageOptions = SDWebImageRetryFailed;
+    
 }
 
 

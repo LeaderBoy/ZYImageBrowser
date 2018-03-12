@@ -7,8 +7,9 @@
 //
 
 #import "ZYZoomScrollView.h"
-#import <UIImageView+WebCache.h>
 #import <UIView+WebCache.h>
+#import "ZYImageItemManager.h"
+#import "UIView+RoundProgressBar.h"
 @interface ZYZoomScrollView()<UIScrollViewDelegate>
 @end
 @implementation ZYZoomScrollView
@@ -43,7 +44,7 @@
     if (@available(iOS 11.0,*)) {
         [self setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    _imageView = [[FLAnimatedImageView alloc] initWithFrame:self.bounds];
 }
 
 -(void)zoom_addSubViews {
@@ -61,10 +62,12 @@
     if (_item.image) {
         _imageView.image = _item.image;
     }else if (_item.url){
-        [_imageView sd_setShowActivityIndicatorView:true];
-        [_imageView sd_setIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-        [_imageView sd_setImageWithPreviousCachedImageWithURL:_item.url placeholderImage:_item.image options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-            
+        ZYImageItemManager *itemManager = [ZYImageItemManager sharedItemManager];
+        ZYImageBrowserLoadingStyle style = [self applyLoadingStyleWithItemManager:itemManager];
+        [_imageView sd_setImageWithURL:_item.url placeholderImage:_item.image options:[self applyWebImageOptionsWithItemManager:itemManager] progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            if (style == ZYImageBrowserLoadingStyleProgressive) {
+                [_imageView zy_showProgressBarWithProgress:(CGFloat)receivedSize/expectedSize];
+            }
         } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             [self resizeImage];
         }];
@@ -73,6 +76,27 @@
     [self resizeImage];
 }
 
+-(SDWebImageOptions)applyWebImageOptionsWithItemManager:(ZYImageItemManager *)itemManager {
+    SDWebImageOptions options;
+    if (itemManager.webImageOptions) {
+        options = itemManager.webImageOptions;
+    }else{
+        options = SDWebImageProgressiveDownload;
+    }
+    return options;
+}
+
+-(ZYImageBrowserLoadingStyle)applyLoadingStyleWithItemManager:(ZYImageItemManager *)itemManager {
+    ZYImageBrowserLoadingStyle style;
+    if (itemManager.loadingStyle == ZYImageBrowserLoadingStyleProgressive) {
+        style = ZYImageBrowserLoadingStyleProgressive;
+    }else{
+        [_imageView sd_setShowActivityIndicatorView:true];
+        [_imageView sd_setIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        style = ZYImageBrowserLoadingStyleIndicatorWhite;
+    }
+    return style;
+}
 
 
 -(void)resetProperty {
