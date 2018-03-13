@@ -50,6 +50,7 @@
     }
     return self;
 }
+
 #pragma mark - Show
 
 -(void)showAnimated:(BOOL)animated {
@@ -352,8 +353,7 @@
     }
 
     self.iCollectionView.alpha = MAX(percent, 0.8);
-    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:alpha];
-    _photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:alpha];
+    self.photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:alpha];
 }
 
 - (void)cancelGestureRecognizerAnimation
@@ -361,7 +361,7 @@
     [UIView animateWithDuration:_animationDuration animations:^{
         _currentBrowserImageView.transform = CGAffineTransformIdentity;
         self.iCollectionView.alpha = 1.0;
-        _photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:1.0];
+        self.photoWindow.backgroundColor = [UIColor colorWithWhite:0 alpha:1.0];
     }];
 }
 

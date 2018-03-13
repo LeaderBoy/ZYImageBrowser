@@ -79,8 +79,9 @@
     ZYImageBrowser *browser = [[ZYImageBrowser alloc] initWithImageItems:_photos];
     [browser showAtIndex:imageView.tag - 100 animated:NO];
     
-    browser.itemManager.loadingStyle = ZYImageBrowserLoadingStyleIndicatorWhite;
-    browser.itemManager.webImageOptions = SDWebImageRetryFailed;
+    browser.itemManager.enableGIF = YES;
+    browser.itemManager.loadingStyle = ZYImageBrowserLoadingStyleProgressive;
+//    browser.itemManager.webImageOptions = SDWebImageRetryFailed;
     
 }
 

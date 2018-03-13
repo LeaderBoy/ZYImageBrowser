@@ -44,7 +44,16 @@
     if (@available(iOS 11.0,*)) {
         [self setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
-    _imageView = [[FLAnimatedImageView alloc] initWithFrame:self.bounds];
+    [self enableGIF];
+}
+
+-(void)enableGIF {
+    ZYImageItemManager *itemManager = [ZYImageItemManager sharedItemManager];
+    if (itemManager.enableGIF) {
+        _imageView = [[FLAnimatedImageView alloc] initWithFrame:self.bounds];
+    }else {
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    }
 }
 
 -(void)zoom_addSubViews {

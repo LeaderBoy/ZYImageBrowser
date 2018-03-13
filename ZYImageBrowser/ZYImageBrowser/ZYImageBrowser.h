@@ -24,7 +24,7 @@
 @property(nonatomic,strong,readonly)ZYImageItemManager * itemManager;
 @property(nonatomic,weak)id<ZYImageBrowserDelegate>delegate;
 /**
- 是否允许手势单击退出 图片浏览 Default is YES
+ 是否允许手势单击退出图片浏览 Default is YES
  */
 @property(nonatomic,assign)BOOL enableSingleTapDismiss;
 
