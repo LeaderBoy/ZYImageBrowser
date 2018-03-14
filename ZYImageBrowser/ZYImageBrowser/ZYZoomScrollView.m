@@ -14,6 +14,7 @@
 @end
 @implementation ZYZoomScrollView
 
+
 #pragma mark - Initial
 -(instancetype)init {
     if (self = [super init]) {
@@ -62,12 +63,18 @@
 
 -(void)layoutSubviews {
     [super layoutSubviews];
+    if (self.zoomScale == 1.0) {
+        self.contentSize = self.bounds.size;
+        [self resizeImage];
+    }
     [self centerImageView];
 }
 #pragma mark - Setter
 
 -(void)setItem:(ZYImageItem *)item {
+    _imageView.image = nil;
     [self resetProperty];
+    
     if (_item != item) {
         _item = item;
     }
@@ -120,9 +127,8 @@
 
 
 -(void)resetProperty {
-    _imageView.image = nil;
     self.zoomScale = 1;
-//    self.contentSize = CGSizeZero;
+    self.contentSize = self.bounds.size;
 }
 -(void)resizeImage {
     if (_imageView.image) {
@@ -131,24 +137,24 @@
         CGFloat scrollHeight = self.bounds.size.height;
         CGFloat scrollWidth = self.bounds.size.width;
         CGSize imageSize = _imageView.image.size;
-        
-        
+
+
         CGFloat resizedImageWidth;
         CGFloat resizedImageHeight;
-        
+
         if (isLandScape) {
-            resizedImageHeight = self.bounds.size.height;
+            resizedImageHeight = scrollHeight;
             resizedImageWidth = imageSize.width * (scrollHeight/imageSize.height);
             resizedImageWidth = ceil(resizedImageWidth);
         }else{
-            resizedImageWidth = self.bounds.size.width ;
+            resizedImageWidth = scrollWidth ;
             resizedImageHeight = imageSize.height * (scrollWidth/imageSize.width);
             resizedImageHeight = ceil(resizedImageHeight);
         }
-        
+
         CGRect resizedImageFrame = CGRectMake(0, 0, resizedImageWidth, resizedImageHeight);
         _imageView.frame = resizedImageFrame;
-        
+
         if (resizedImageHeight > scrollHeight) {
             _imageView.center = CGPointMake(scrollWidth/2, resizedImageHeight/2);
         }else{
@@ -158,6 +164,7 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         _imageView.center = self.center;
     }
+    
 }
 #pragma mark - UIScrollViewDelegate
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {

@@ -58,13 +58,13 @@
     self.photoWindow.frame = self.view.bounds;
     [self.iCollectionView setContentOffset:CGPointMake(self.iCollectionView.bounds.size.width * _currentIndex,0)];
     [self.iCollectionView.collectionViewLayout invalidateLayout];
-    
 }
 
 -(CGRect)frameForCollectionView {
     CGRect frame = self.view.bounds;
     frame.size.width += _collectionViewPadding;
     self.iCollectionView.frame = frame;
+    self.iCollectionView.contentSize = CGSizeMake(frame.size.width * _photos.count, frame.size.height);
     return frame;
 }
 
@@ -76,6 +76,7 @@
 
 -(void)showAtIndex:(NSInteger)index animated:(BOOL)animated {
     NSAssert(_photos.count > index, @"index 越界");
+    _currentIndex = index;
     self.photoWindow.hidden = NO;
     self.currentItem = _photos[index];
     
