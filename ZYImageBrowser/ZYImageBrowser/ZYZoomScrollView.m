@@ -13,7 +13,9 @@
 @interface ZYZoomScrollView()<UIScrollViewDelegate>
 @end
 @implementation ZYZoomScrollView
-
+{
+    BOOL _isDeviceRotate;
+}
 
 #pragma mark - Initial
 -(instancetype)init {
@@ -34,6 +36,7 @@
 }
 
 -(void)initialProperty {
+    _isDeviceRotate = NO;
     self.delegate = self;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
@@ -67,7 +70,6 @@
         self.contentSize = self.bounds.size;
         [self resizeImage];
     }
-    [self centerImageView];
 }
 #pragma mark - Setter
 
@@ -106,12 +108,6 @@
     return options;
 }
 
--(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-    [super traitCollectionDidChange:previousTraitCollection];
-    [self setZoomScale:1.0 animated:YES];
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-}
 
 -(ZYImageBrowserLoadingStyle)applyLoadingStyleWithItemManager:(ZYImageItemManager *)itemManager {
     ZYImageBrowserLoadingStyle style;
@@ -137,7 +133,6 @@
         CGFloat scrollHeight = self.bounds.size.height;
         CGFloat scrollWidth = self.bounds.size.width;
         CGSize imageSize = _imageView.image.size;
-
 
         CGFloat resizedImageWidth;
         CGFloat resizedImageHeight;
@@ -194,6 +189,15 @@
     }
     _imageView.center = CGPointMake(contentWidth/2 + centerOffsetX, contentHeight/2 + centerOffsetY);
 }
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    _isDeviceRotate = YES;
+    self.zoomScale = 1.0;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
 
 -(BOOL)isLandScape {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];

@@ -427,7 +427,6 @@
         CGFloat maxZoomScale = _zoomScrollView.maximumZoomScale;
         CGFloat width = self.view.bounds.size.width / maxZoomScale;
         CGFloat height = self.view.bounds.size.height / maxZoomScale;
-
         [_zoomScrollView zoomToRect:CGRectMake(location.x - width/2, location.y - height/2, width, height) animated:YES];
     }
 }
