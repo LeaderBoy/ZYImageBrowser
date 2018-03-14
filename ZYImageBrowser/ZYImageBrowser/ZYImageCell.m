@@ -28,7 +28,20 @@
 }
 
 -(void)cell_addSubViews {
-    [self.contentView addSubview:self.zoomView];
+    if (!self.zoomView.superview) {
+        self.zoomView = [[ZYZoomScrollView alloc] initWithFrame:self.bounds];
+        [self.contentView addSubview:self.zoomView];
+    }
+}
+
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    self.zoomView.frame = [self frameForZoomView];
+}
+
+-(CGRect)frameForZoomView {
+    CGRect frame = self.contentView.bounds;
+    return frame;
 }
 
 -(void)setItem:(ZYImageItem *)item {
@@ -36,12 +49,5 @@
     self.zoomView.item = item;
 }
 
-
--(ZYZoomScrollView *)zoomView {
-    if (!_zoomView) {
-        _zoomView = [[ZYZoomScrollView alloc] initWithFrame:self.bounds];
-    }
-    return _zoomView;
-}
 
 @end

@@ -42,6 +42,7 @@
     self = [super init];
     if (self) {
         _photos = imageItems;
+        _currentIndex = 0;
         _collectionViewPadding = 15;
         _animationDuration = 0.3;
         _enableSingleTapDismiss = YES;
@@ -49,6 +50,22 @@
         [self browser_addSubViews];
     }
     return self;
+}
+#pragma mark - Layout
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    [self frameForCollectionView];
+    self.photoWindow.frame = self.view.bounds;
+    [self.iCollectionView setContentOffset:CGPointMake(self.iCollectionView.bounds.size.width * _currentIndex,0)];
+    [self.iCollectionView.collectionViewLayout invalidateLayout];
+    
+}
+
+-(CGRect)frameForCollectionView {
+    CGRect frame = self.view.bounds;
+    frame.size.width += _collectionViewPadding;
+    self.iCollectionView.frame = frame;
+    return frame;
 }
 
 #pragma mark - Show
@@ -175,6 +192,11 @@
     return cell;
 }
 
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+//    [self.iCollectionView performBatchUpdates:nil completion:nil];
+}
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -190,6 +212,7 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     NSInteger index = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    _currentIndex = index;
     [self configueCurrentZoomViewAtIndex:index];
     if (_photos.count > index) {
         self.currentItem = _photos[index];
@@ -408,12 +431,11 @@
     }
 }
 
-
--(void)dealloc {
-    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
-    [[[SDWebImageManager sharedManager] imageCache] clearDiskOnCompletion:nil];
-}
-
+//
+//-(void)dealloc {
+//    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
+//    [[[SDWebImageManager sharedManager] imageCache] clearDiskOnCompletion:nil];
+//}
 
 
 

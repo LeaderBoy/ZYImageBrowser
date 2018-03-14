@@ -64,13 +64,14 @@ static NSString *const kStrokeEndAnimationKey = @"kStrokeEndAnimationKey";
     [self zy_removeSubViews];
     
     self.progressLayer = [self roundAnimatedLayer];
+    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 38, 24)];
-    label.text = @"   1";
     label.center = self.center;
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:14];
     self.progressLabel = label;
+    
     [self addSubview:self.progressLabel];
     [self.layer addSublayer:self.progressLayer];
 }
